@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
   assetPrefix: isGithubPages && repoName && !isUserSite ? `/${repoName}/` : "",
   env: {
     NEXT_PUBLIC_BASE_PATH: isGithubPages && repoName && !isUserSite ? `/${repoName}` : "",
+    NEXT_PUBLIC_ASSET_VERSION: process.env.GITHUB_SHA?.slice(0, 7) ?? "local",
   },
   images: {
     unoptimized: true,
