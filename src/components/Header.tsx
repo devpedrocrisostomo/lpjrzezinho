@@ -4,6 +4,7 @@ import { Menu, ShoppingCart, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { assetPath } from "@/lib/assets";
 
 type HeaderProps = {
   cartCount: number;
@@ -31,7 +32,7 @@ export function Header({ cartCount, onOrderClick, orderHref = "#pedido" }: Heade
       <div className="section-shell flex h-[76px] items-center justify-between">
         <Link href="/#inicio" className="flex items-center gap-3">
           <Image
-            src="/images/logo-jr-zezinho.svg"
+            src={assetPath("/images/logo-jr-zezinho.svg")}
             alt="Logo J.R. Zezinho"
             width={60}
             height={60}

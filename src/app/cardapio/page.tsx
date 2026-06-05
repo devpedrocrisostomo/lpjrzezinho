@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Header } from "@/components/Header";
 import { MenuSection } from "@/components/MenuSection";
 import { OrderPanel } from "@/components/OrderPanel";
+import { assetPath } from "@/lib/assets";
 import type { MenuItem } from "@/data/menuData";
 import type { CartItem } from "@/types/order";
 
@@ -68,7 +69,7 @@ export default function CardapioPage() {
       <section className="relative overflow-hidden bg-[#061a36] text-white">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-35"
-          style={{ backgroundImage: "url('/images/pizza-brasa.jpg')" }}
+          style={{ backgroundImage: `url('${assetPath("/images/pizza-brasa.jpg")}')` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#061a36] via-[#061a36]/92 to-[#061a36]/62" />
         <div className="section-shell relative z-10 grid gap-8 py-12 lg:grid-cols-[1fr_260px] lg:items-center">
@@ -86,7 +87,7 @@ export default function CardapioPage() {
           </div>
           <div className="hidden justify-self-end lg:block">
             <Image
-              src="/images/logo-jr-zezinho.svg"
+              src={assetPath("/images/logo-jr-zezinho.svg")}
               alt="Logo J.R. Zezinho"
               width={190}
               height={190}

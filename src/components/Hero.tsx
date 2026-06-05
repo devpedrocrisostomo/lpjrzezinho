@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, Clock, MapPin, MessageCircle, Phone } from "lucide-react";
+import { assetPath } from "@/lib/assets";
 
 type HeroProps = {
   onOrderClick: () => void;
@@ -13,7 +14,7 @@ export function Hero({ onOrderClick }: HeroProps) {
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/churrasco.jpg')" }}
+        style={{ backgroundImage: `url('${assetPath("/images/churrasco.jpg")}')` }}
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,26,54,0.97)_0%,rgba(6,26,54,0.86)_42%,rgba(6,26,54,0.42)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(225,25,25,0.22),transparent_34%)]" />
@@ -23,7 +24,7 @@ export function Hero({ onOrderClick }: HeroProps) {
         <div className="max-w-3xl">
           <div className="mb-6 flex items-center gap-4">
             <Image
-              src="/images/logo-jr-zezinho.svg"
+              src={assetPath("/images/logo-jr-zezinho.svg")}
               alt="Logo J.R. Zezinho"
               width={92}
               height={92}
@@ -81,7 +82,7 @@ export function Hero({ onOrderClick }: HeroProps) {
         <aside className="hidden rounded border border-white/12 bg-white/[0.08] p-4 backdrop-blur-xl lg:block">
           <div className="relative h-[430px] overflow-hidden rounded">
             <Image
-              src="/images/pizza-mista.jpg"
+              src={assetPath("/images/pizza-mista.jpg")}
               alt="Pizza J.R. Zezinho"
               fill
               className="object-cover"

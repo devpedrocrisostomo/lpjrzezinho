@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, MessageCircle, Phone } from "lucide-react";
+import { assetPath } from "@/lib/assets";
 
 const address = "R. Des. Praxedes, 568 - Bom Futuro, Fortaleza - CE, 60416-480";
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
@@ -29,7 +30,7 @@ export function AboutSection() {
         <div className="grid grid-cols-2 gap-4">
           <div className="relative h-80 overflow-hidden rounded border border-white/10">
             <Image
-              src="/images/ambiente.jpg"
+              src={assetPath("/images/ambiente.jpg")}
               alt="Ambiente do J.R. Zezinho"
               fill
               className="object-cover"
@@ -37,7 +38,7 @@ export function AboutSection() {
           </div>
           <div className="relative mt-10 h-80 overflow-hidden rounded border border-white/10">
             <Image
-              src="/images/pizza-mista.jpg"
+              src={assetPath("/images/pizza-mista.jpg")}
               alt="Pizza do J.R. Zezinho"
               fill
               className="object-cover"
